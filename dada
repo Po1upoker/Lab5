@@ -1,0 +1,29 @@
+3) ps -u root -o pid,ppid,user,cmd --sort ppid > proc1
+
+4) ps -u root -o pid,stat,user,cmd --sort pid
+
+5) ps -eo pid,%cpu,%mem,cmd --sort -%cpu | head -n 2 | tail -n 1 >> proc1
+
+6) top
+ 2621  2316 root     S     7156   0%   0   0% sshd: root@pts/2
+ 2500  2316 root     S     7124   0%   0   0% sshd: root@pts/0
+
+7) top -u - выводить только процессы, запущенные от имени указанного пользователя.
+top -f -  настройка полей с информацией о процессах
+top -d -  настройка периодичности вывода
+top -L - поиск по слову
+
+8)firefox
+ pstree -p | grep firefox
+
+9) firefox
+gedit &
+gedit &
+
+10)jobs
+
+12) kill -l
+kill PID
+
+13)killall -u root 
+
